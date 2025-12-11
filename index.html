@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Tifany Ontiveros, Desarrolladora Web Front-End. Experiencia en HTML5, CSS3, JavaScript y más.">
+    <meta name="keywords" content="Portafolio, Frontend, Developer, JavaScript, HTML, CSS, Web, Tifany Ontiveros">
+    
+    <title data-key="doc_title">Tifany Ontiveros | Portafolio de Desarrolladora Web Front-End</title>
+    
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="estilo.css">
+    
+</head>
+
+<body>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <h1 class="logo"><a href="#hero">Tifany Ontiveros</a></h1> 
+            
+            <nav class="nav" id="nav" aria-label="Navegación principal del sitio">
+                <ul>
+                    <li><a href="#hero" data-key="nav_home">Inicio</a></li>
+                    <li><a href="#sobre-mi" data-key="nav_about">Sobre mí</a></li>
+                    <li><a href="#habilidades" data-key="nav_skills">Habilidades</a></li>
+                    <li><a href="#proyectos" data-key="nav_projects">Proyectos</a></li>
+                    <li><a href="#contacto" data-key="nav_contact">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher">
+                <label for="language-select" class="sr-only">Seleccionar idioma</label> 
+                <select id="language-select" aria-label="Selector de idioma">
+                    <option value="es" selected>🇲🇽 Español</option> 
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                </select>
+            </div>
+            
+        </div>
+    </header>
+
+    <section id="hero" class="hero" aria-labelledby="hero-name">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1 id="hero-name">Tifany Nicole Ontiveros Sánchez</h1> 
+                <p id="hero-role" data-key="hero_role">Desarrolladora Web Front-End</p>
+
+                <p class="hero-cta">
+                    <a class="btn" id="btn-projects" href="#proyectos" data-key="hero_btn_projects">Ver proyectos</a> 
+                    <a class="btn btn-outline" id="btn-cv" href="CVV.pdf" download="CV-TifanyOntiveros-Frontend.pdf" role="button" data-key="hero_btn_cv">Descargar CV</a>
+                </p>
+            </div>
+
+            <div class="hero-photo">
+                <img src="foto.jpg" alt="Retrato profesional de Tifany Ontiveros, Desarrolladora Web Front-End.">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="section" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title" data-key="title_about">Sobre mí</h2>
+            <p id="about-text" data-key="text_about">
+                Soy desarrolladora Front-End enfocada en interfaces modernas, accesibles y responsivas. 
+                Mi pasión es traducir diseños creativos en experiencias de usuario fluidas y eficientes, utilizando principalmente HTML, CSS, y JavaScript.
+            </p>
+        </div>
+    </section>
+
+    <section id="habilidades" class="section alt" aria-labelledby="skills-title">
+        <div class="container">
+            <h2 id="skills-title" data-key="title_skills">Habilidades técnicas</h2>
+
+            <div class="skills-grid">
+                <div role="group" aria-labelledby="skills-lang">
+                    <h3 id="skills-lang" data-key="skills_lang_title">Lenguajes</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                    </ul>
+                </div>
+
+                <div role="group" aria-labelledby="skills-frameworks">
+                    <h3 id="skills-frameworks" data-key="skills_frameworks_title">Frameworks y Librerías</h3> 
+                    <ul>
+                        <li>React</li>
+                        <li>Tailwind CSS</li> 
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+
+                <div role="group" aria-labelledby="skills-tools">
+                    <h3 id="skills-tools" data-key="skills_tools_title">Herramientas y Otros</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Figma</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section" aria-labelledby="projects-title">
+        <div class="container">
+            <h2 id="projects-title" data-key="title_projects">Proyectos principales</h2>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <a href="https://www.figma.com/design/t18B1TD3Po3zbTNpO1RWSD/RutaMaz?node-id=0-1&t=xhGVRp5iatTZ82TY-1" target="_blank" aria-label="Aplicación móvil Rutamaz">
+                        <img src="rutamaz.png" alt="Captura de pantalla de la Aplicación móvil Rutamaz">
+                    </a>
+                    
+                    <h3 data-key="project_rutamaz_title">Aplicacion movil Rutamaz</h3>
+                    <p data-key="project_rutamaz_desc">Aplicación móvil sobre rutas de transporte público en Mazatlán, desde el diseño hasta el prototipo interactivo.</p>
+                    
+                    <div class="project-tags"> 
+                        <span class="tag">HTML</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="https://www.figma.com/design/t18B1TD3Po3zbTNpO1RWSD/RutaMaz?node-id=0-1&t=xhGVRp5iatTZ82TY-1" class="btn btn-small" target="_blank" data-key="project_btn_view">Ver Figma</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <a href="https://www.figma.com/design/vLVLjb3iGSoS2QxVEy5SST/Easyhome?node-id=0-1&t=R4qm8oQmOWH0GvSw-1" target="_blank" aria-label="Maquetación del sitio web EazyHome">
+                        <img src="eazyhome.png" alt="Captura de pantalla del sitio web Eazy Home">
+                    </a>
+                    
+                    <h3 data-key="project_eazyhome_title">Eazy Home</h3>
+                    <p data-key="project_eazyhome_desc">Maquetación y diseño de interfaz para el sitio web EazyHome, un proyecto de bienes raíces.</p>
+                    
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">MySQL</span> 
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="https://www.figma.com/design/vLVLjb3iGSoS2QxVEy5SST/Easyhome?node-id=0-1&t=R4qm8oQmOWH0GvSw-1" class="btn btn-small" target="_blank" data-key="project_btn_view">Ver Figma</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+   <section id="certificaciones" class="section alt" aria-labelledby="certs-title">
+    <div class="container">
+        <h2 id="certs-title" data-key="title_certs">Certificaciones y Cursos</h2> 
+        
+        <div class="certs-grid">
+            
+            <a href="https://www.credly.com/badges/331e1f7a-054a-4100-b6f2-74b82e8f6f92/public_url" class="cert" target="_blank" aria-label="Certificación CSS Essentials">
+                <img src="css.png" alt="Logo de certificado CSS">
+                <div>
+                    <p data-key="cert_css_title">CSS Essentials</p>
+                    <span class="cert-provider" data-key="cert_provider">Cisco NetAcad</span> 
+                </div>
+            </a>
+
+            <a href="https://www.credly.com/badges/331e1f7a-054a-4100-b6f2-74b82e8f6f92/public_url" class="cert" target="_blank" aria-label="Certificación HTML Essentials">
+                <img src="cert2.png" alt="Logo de certificado HTML">
+                <div>
+                    <p data-key="cert_html_title">HTML Essentials</p>
+                    <span class="cert-provider" data-key="cert_provider">Cisco NetAcad</span>
+                </div>
+            </a>
+            
+            </div>
+    </div>
+</section>
+
+    <section id="contacto" class="section" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" data-key="title_contact">Hablemos | Contacto</h2>
+
+            <div class="contact-grid">
+                <dl>
+                    <dt data-key="contact_email_label">Email:</dt>
+                    <dd><a href="mailto:niicole_21@hotmail.com">niicole_21@hotmail.com</a></dd>
+
+                    <dt data-key="contact_linkedin_label">LinkedIn:</dt>
+                    <dd><a href="https://www.linkedin.com/in/tifany-ontiveros-713a8129a" target="_blank">linkedin.com/in/tifanyontiveros</a></dd>
+
+                    <dt data-key="contact_github_label">GitHub:</dt>
+                    <dd><a href="https://gitlab.com/tifanyontiveros" target="_blank">gitlab.com/tifanyontiveros</a></dd>
+                    
+                    <dt data-key="contact_location_label">Ubicación:</dt>
+                    <dd>Ciudad, País</dd>
+                </dl>
+
+                <form class="contact-form" action="mailto:niicole_21@hotmail.com" method="POST" enctype="text/plain"> 
+                    <label for="input-nombre" data-key="form_name_label">Nombre:</label>
+                    <input type="text" id="input-nombre" name="nombre" required> 
+                    
+                    <label for="input-email" data-key="form_email_label">Email:</label>
+                    <input type="email" id="input-email" name="email" required> 
+                    
+                    <label for="input-mensaje" data-key="form_message_label">Mensaje:</label>
+                    <textarea id="input-mensaje" name="mensaje" rows="4" required></textarea>
+
+                    <button class="btn" type="submit" data-key="form_submit">Enviar mensaje</button> 
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <p data-key="footer_text"> © 2025 Tifany Ontiveros — Frontend Developer</p>
+    </footer>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

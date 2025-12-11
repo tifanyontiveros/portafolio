@@ -1,0 +1,638 @@
+/* ========================================================= */
+/* 1. CONFIGURACIÓN INICIAL Y VARIABLES (ROOT) */
+/* ========================================================= */
+
+:root {
+    /* Colores de Fondo */
+    --bg1: #0d0917;
+    --bg2: #1a122c;
+    --bg3: #221a38;
+
+    /* Colores de Acento (Morados/Fucsia) */
+    --accent: #8b5cf6;
+    --accent-light: #c4b5fd;
+    --accent-pink: #f0d9ff;
+    --accent-fuchsia: #d946ef;
+
+    /* Colores de Texto */
+    --text: #f7f2ff;
+    --muted: #b6a8d9;
+
+    /* Configuración de Layout */
+    --radius: 14px;
+    --max-width: 1100px;
+    
+    /* NUEVAS VARIABLES: Transiciones y Sombra */
+    --transition-fast: all 0.3s ease; 
+    --shadow-accent: 0 5px 25px rgba(139, 92, 246, 0.15); 
+    
+    font-family: 'Inter', sans-serif;
+}
+
+/* Reset y Box Sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de Tipografía y Scroll */
+html {
+    scroll-behavior: smooth; /* Para un scroll suave al hacer clic en enlaces internos */
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg1), var(--bg2), var(--bg3));
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Listas sin viñetas por defecto */
+ul {
+    list-style: none; 
+}
+
+/* ========================================================= */
+/* 2. LAYOUT BASE */
+/* ========================================================= */
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Ajuste para mejor espaciado en los bordes */
+}
+
+/* Títulos de Sección */
+h2 {
+    margin-bottom: 2rem; 
+    padding-bottom: 10px; 
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background: var(--accent-fuchsia); 
+    bottom: 0;
+    left: 0;
+}
+
+
+/* ========================================================= */
+/* 3. HEADER Y NAVEGACIÓN */
+/* ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 5, 25, 0.9); /* Subí la opacidad */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--bg3);
+    z-index: 100; /* Asegura que esté por encima de todo */
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+/* NAV */
+.nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: .5rem .7rem;
+    border-radius: var(--radius);
+    transition: var(--transition-fast);
+    display: block;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    background: var(--accent-fuchsia);
+    color: var(--bg1);
+}
+
+/* LANG SELECT */
+#language-select {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: .4rem .7rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Clase para ocultar visualmente pero mantener para lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ========================================================= */
+/* 4. HERO */
+/* ========================================================= */
+
+.hero {
+    padding: 5rem 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, var(--accent-light), var(--accent), var(--accent-fuchsia));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-text #hero-role {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+/* CONTENEDOR DE LA FOTO: Define el área cuadrada */
+.hero-photo {
+    width: 320px; 
+    height: 320px; 
+    margin: 0 auto;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    
+    /* PROPIEDAD CLAVE: Hace la imagen circular */
+    border-radius: 50%;
+    
+    /* Asegura que la imagen cubra el círculo sin estirarse */
+    object-fit: cover; 
+    
+    /* Sombra profesional y sutil */
+    box-shadow: 0 0 15px 5px rgba(139, 92, 246, 0.4), 
+                0 0 30px 10px rgba(217, 70, 239, 0.2);
+}
+
+/* BUTTONS */
+.btn {
+    background: linear-gradient(90deg, var(--accent), var(--accent-fuchsia));
+    padding: .75rem 1rem;
+    border-radius: var(--radius);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-fast);
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.btn-outline {
+    background: none;
+    border: 2px solid var(--accent-light);
+    color: var(--accent-light);
+    padding: .7rem 1rem;
+    transition: var(--transition-fast);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: white; 
+    border-color: var(--accent);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-small {
+    padding: .5rem .8rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+
+/* ========================================================= */
+/* 5. SECCIONES (Sobre Mí, Habilidades, Certificaciones) */
+/* ========================================================= */
+
+.section {
+    padding: 3.5rem 0;
+}
+
+.section.alt {
+    background-color: var(--bg3);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.skills-grid div {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+}
+
+.skills-grid h3 {
+    color: var(--accent-light);
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.skills-grid ul {
+    padding-top: 0.5rem;
+}
+
+/* ========================================================= */
+/* 6. PROYECTOS */
+/* ========================================================= */
+
+/* ========================================================= */
+/* 6. PROYECTOS */
+/* ========================================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: var(--radius);
+    transition: var(--transition-fast); 
+    border: 1px solid transparent; 
+    
+    /* Revertimos a la estructura apilada (imagen arriba, texto abajo) */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: var(--accent); 
+    background: rgba(139, 92, 246, 0.1); 
+    box-shadow: var(--shadow-accent); 
+    transform: translateY(-5px); 
+}
+
+/* Restaura el estilo de la imagen grande y completa */
+.project-card img {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: auto; /* Permite que la altura se ajuste naturalmente */
+    border-radius: 10px;
+    margin-bottom: .7rem;
+    display: block;
+    object-fit: cover; /* Asegura que la imagen se vea bien */
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--muted);
+    flex-grow: 1; 
+}
+
+.project-tags {
+    margin: 0.8rem 0;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--accent-pink);
+    color: #5323a8;
+    padding: .3rem .6rem;
+    border-radius: 8px;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-right: 0.4rem;
+}
+
+.project-actions {
+    margin-top: 1rem;
+}
+
+/* ========================================================= */
+/* 7. CERTIFICACIONES */
+/* ========================================================= */
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.cert {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: var(--radius);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none; 
+    color: var(--text);
+    transition: var(--transition-fast);
+}
+
+.cert:hover {
+    background: var(--bg2);
+    box-shadow: var(--shadow-accent);
+}
+
+.cert img {
+    width: 90px; /* Tamaño del logo de la certificación */
+    height: px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.cert p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.cert-provider {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+
+/* ========================================================= */
+/* 8. CONTACTO */
+/* ========================================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+}
+
+/* Estilos para la lista de descripción (dl) */
+.contact-grid dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0.5rem 1rem;
+}
+.contact-grid dt {
+    font-weight: 600;
+    color: var(--accent-light);
+}
+.contact-grid dd {
+    margin: 0;
+}
+.contact-grid dd a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.contact-grid dd a:hover {
+    color: var(--accent);
+}
+
+/* Formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact-form label {
+    font-weight: 500;
+    color: var(--accent-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: .8rem;
+    border-radius: 10px;
+    background: #1a0f2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3);
+}
+
+/* ========================================================= */
+/* 9. FOOTER */
+/* ========================================================= */
+
+.site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    opacity: .7;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* ========================================================= */
+/* 10. MEDIA QUERIES (RESPONSIVIDAD) */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+    /* Ajustes para tabletas */
+    .hero-grid {
+        grid-template-columns: 1fr 250px; /* Foto más pequeña */
+    }
+    .projects-grid {
+        gap: 1.5rem;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr 1fr; /* Mantiene dos columnas, pero más estrechas */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+    
+    /* Global */
+    .container {
+        padding: 0 1rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    h2::after {
+        left: 50%;
+        transform: translateX(-50%); /* Centra la línea debajo del título */
+    }
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    /* HEADER / NAV */
+    .site-header {
+        padding-bottom: 1rem;
+    }
+    .header-inner {
+        flex-direction: column; 
+        gap: 0.5rem;
+    }
+    .nav ul {
+        flex-direction: column; 
+        gap: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav a {
+        padding: 0.7rem 1rem;
+    }
+    .lang-switcher {
+        margin-top: 0.5rem;
+    }
+    
+    /* HERO */
+    .hero {
+        padding: 2rem 0;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
+    }
+    .hero-photo {
+        order: -1; /* Mueve la foto al principio */
+        margin-bottom: 2rem;
+        
+        /* AJUSTE PARA MÓVIL: Reducir el tamaño del contenedor cuadrado */
+        width: 200px;
+        height: 200px;
+    }
+    .hero-photo img {
+        max-width: 100%; /* Ahora controlado por el contenedor .hero-photo */
+        margin: 0 auto;
+    }
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+    .hero-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* SKILLS */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Una columna para habilidades */
+        gap: 1rem;
+    }
+    
+    /* PROYECTOS */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una columna para proyectos */
+    }
+    
+    /* CERTIFICACIONES */
+    .certs-grid {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+    .cert {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* CONTACTO */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Una columna para contacto */
+    }
+    .contact-grid dl {
+        grid-template-columns: 1fr; /* Apila las descripciones */
+        text-align: center;
+    }
+    .contact-grid dt {
+        margin-top: 1rem;
+    }
+}
+/* ========================================================= */
+/* ESTILOS PARA INTERACCIÓN Y MOVIMIENTO */
+/* ========================================================= */
+
+/* 1. Transición para el Header (Prepara para el efecto sticky/dinámico) */
+.site-header {
+    transition: all 0.4s ease-in-out; /* Suaviza todos los cambios */
+}
+
+/* 2. Clase que se activa con JavaScript al hacer scroll */
+.site-header.scrolled {
+    background-color: #4a2a76; /* Fondo sólido o muy claro al hacer scroll */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Añade una sombra para que flote */
+    padding: 10px 0; /* Reduce la altura del header */
+}
+
+/* 3. Transiciones en Tarjetas y Botones para mejor UX */
+.project-card, .cert {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .cert:hover {
+    transform: translateY(-5px); /* Se levanta 5px */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.btn {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.98); /* Pequeña pulsación al hacer clic */
+}
