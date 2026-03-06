@@ -1,221 +1,328 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Tifany Ontiveros, Desarrolladora Web Front-End. Experiencia en HTML5, CSS3, JavaScript y más.">
-    <meta name="keywords" content="Portafolio, Frontend, Developer, JavaScript, HTML, CSS, Web, Tifany Ontiveros">
-    
-    <title data-key="doc_title">Tifany Ontiveros | Portafolio de Desarrolladora Web Front-End</title>
-    
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    
-    <link rel="stylesheet" href="estilo.css">
-    
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio de Tifany Ontiveros — Desarrolladora Web Front-End. HTML5, CSS3, JavaScript, React."/>
+  <title>Tifany Ontiveros · Front-End Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="estilo.css"/>
 </head>
-
 <body>
 
-    <header class="site-header" role="banner">
-        <div class="container header-inner">
-            <h1 class="logo"><a href="#hero">Tifany Ontiveros</a></h1> 
-            
-            <nav class="nav" id="nav" aria-label="Navegación principal del sitio">
-                <ul>
-                    <li><a href="#hero" data-key="nav_home">Inicio</a></li>
-                    <li><a href="#sobre-mi" data-key="nav_about">Sobre mí</a></li>
-                    <li><a href="#habilidades" data-key="nav_skills">Habilidades</a></li>
-                    <li><a href="#proyectos" data-key="nav_projects">Proyectos</a></li>
-                    <li><a href="#contacto" data-key="nav_contact">Contacto</a></li>
-                </ul>
-            </nav>
+<div id="cur-outer"></div>
+<div id="cur-inner"></div>
+<canvas id="constellation"></canvas>
 
-            <div class="lang-switcher">
-                <label for="language-select" class="sr-only">Seleccionar idioma</label> 
-                <select id="language-select" aria-label="Selector de idioma">
-                    <option value="es" selected>🇲🇽 Español</option> 
-                    <option value="en">🇺🇸 English</option>
-                    <option value="fr">🇫🇷 Français</option>
-                </select>
-            </div>
-            
-        </div>
-    </header>
-
-    <section id="hero" class="hero" aria-labelledby="hero-name">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <h1 id="hero-name">Tifany Nicole Ontiveros Sánchez</h1> 
-                <p id="hero-role" data-key="hero_role">Desarrolladora Web Front-End</p>
-
-                <p class="hero-cta">
-                    <a class="btn" id="btn-projects" href="#proyectos" data-key="hero_btn_projects">Ver proyectos</a> 
-                    <a class="btn btn-outline" id="btn-cv" href="CVV.pdf" download="CV-TifanyOntiveros-Frontend.pdf" role="button" data-key="hero_btn_cv">Descargar CV</a>
-                </p>
-            </div>
-
-            <div class="hero-photo">
-                <img src="foto.jpg" alt="Retrato profesional de Tifany Ontiveros, Desarrolladora Web Front-End.">
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre-mi" class="section" aria-labelledby="about-title">
-        <div class="container">
-            <h2 id="about-title" data-key="title_about">Sobre mí</h2>
-            <p id="about-text" data-key="text_about">
-                Soy desarrolladora Front-End enfocada en interfaces modernas, accesibles y responsivas. 
-                Mi pasión es traducir diseños creativos en experiencias de usuario fluidas y eficientes, utilizando principalmente HTML, CSS, y JavaScript.
-            </p>
-        </div>
-    </section>
-
-    <section id="habilidades" class="section alt" aria-labelledby="skills-title">
-        <div class="container">
-            <h2 id="skills-title" data-key="title_skills">Habilidades técnicas</h2>
-
-            <div class="skills-grid">
-                <div role="group" aria-labelledby="skills-lang">
-                    <h3 id="skills-lang" data-key="skills_lang_title">Lenguajes</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                    </ul>
-                </div>
-
-                <div role="group" aria-labelledby="skills-frameworks">
-                    <h3 id="skills-frameworks" data-key="skills_frameworks_title">Frameworks y Librerías</h3> 
-                    <ul>
-                        <li>React</li>
-                        <li>Tailwind CSS</li> 
-                        <li>Bootstrap</li>
-                    </ul>
-                </div>
-
-                <div role="group" aria-labelledby="skills-tools">
-                    <h3 id="skills-tools" data-key="skills_tools_title">Herramientas y Otros</h3>
-                    <ul>
-                        <li>Git / GitHub</li>
-                        <li>Figma</li>
-                        <li>VS Code</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos" class="section" aria-labelledby="projects-title">
-        <div class="container">
-            <h2 id="projects-title" data-key="title_projects">Proyectos principales</h2>
-
-            <div class="projects-grid">
-                <article class="project-card">
-                    <a href="https://www.figma.com/design/t18B1TD3Po3zbTNpO1RWSD/RutaMaz?node-id=0-1&t=xhGVRp5iatTZ82TY-1" target="_blank" aria-label="Aplicación móvil Rutamaz">
-                        <img src="rutamaz.png" alt="Captura de pantalla de la Aplicación móvil Rutamaz">
-                    </a>
-                    
-                    <h3 data-key="project_rutamaz_title">Aplicacion movil Rutamaz</h3>
-                    <p data-key="project_rutamaz_desc">Aplicación móvil sobre rutas de transporte público en Mazatlán, desde el diseño hasta el prototipo interactivo.</p>
-                    
-                    <div class="project-tags"> 
-                        <span class="tag">HTML</span>
-                        <span class="tag">Figma</span>
-                    </div>
-                    
-                    <div class="project-actions">
-                        <a href="https://www.figma.com/design/t18B1TD3Po3zbTNpO1RWSD/RutaMaz?node-id=0-1&t=xhGVRp5iatTZ82TY-1" class="btn btn-small" target="_blank" data-key="project_btn_view">Ver Figma</a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <a href="https://www.figma.com/design/vLVLjb3iGSoS2QxVEy5SST/Easyhome?node-id=0-1&t=R4qm8oQmOWH0GvSw-1" target="_blank" aria-label="Maquetación del sitio web EazyHome">
-                        <img src="eazyhome.png" alt="Captura de pantalla del sitio web Eazy Home">
-                    </a>
-                    
-                    <h3 data-key="project_eazyhome_title">Eazy Home</h3>
-                    <p data-key="project_eazyhome_desc">Maquetación y diseño de interfaz para el sitio web EazyHome, un proyecto de bienes raíces.</p>
-                    
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">MySQL</span> 
-                    </div>
-                    
-                    <div class="project-actions">
-                        <a href="https://www.figma.com/design/vLVLjb3iGSoS2QxVEy5SST/Easyhome?node-id=0-1&t=R4qm8oQmOWH0GvSw-1" class="btn btn-small" target="_blank" data-key="project_btn_view">Ver Figma</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-   <section id="certificaciones" class="section alt" aria-labelledby="certs-title">
-    <div class="container">
-        <h2 id="certs-title" data-key="title_certs">Certificaciones y Cursos</h2> 
-        
-        <div class="certs-grid">
-            
-            <a href="https://www.credly.com/badges/331e1f7a-054a-4100-b6f2-74b82e8f6f92/public_url" class="cert" target="_blank" aria-label="Certificación CSS Essentials">
-                <img src="css.png" alt="Logo de certificado CSS">
-                <div>
-                    <p data-key="cert_css_title">CSS Essentials</p>
-                    <span class="cert-provider" data-key="cert_provider">Cisco NetAcad</span> 
-                </div>
-            </a>
-
-            <a href="https://www.credly.com/badges/331e1f7a-054a-4100-b6f2-74b82e8f6f92/public_url" class="cert" target="_blank" aria-label="Certificación HTML Essentials">
-                <img src="cert2.png" alt="Logo de certificado HTML">
-                <div>
-                    <p data-key="cert_html_title">HTML Essentials</p>
-                    <span class="cert-provider" data-key="cert_provider">Cisco NetAcad</span>
-                </div>
-            </a>
-            
-            </div>
+<header class="site-header" id="hdr" role="banner">
+  <div class="wrap hdr-inner">
+    <div class="logo">Tifany<span style="color:var(--gold);">.</span></div>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#hero"        data-key="nav_home"  class="on">Inicio</a></li>
+        <li><a href="#sobre-mi"    data-key="nav_about"    >Sobre mí</a></li>
+        <li><a href="#habilidades" data-key="nav_skills"   >Habilidades</a></li>
+        <li><a href="#proyectos"   data-key="nav_projects" >Proyectos</a></li>
+        <li><a href="#contacto"    data-key="nav_contact"  >Contacto</a></li>
+      </ul>
+    </nav>
+    <div>
+      <label for="lang-select" class="sr-only">Idioma</label>
+      <select id="lang-select" aria-label="Selector de idioma">
+        <option value="es" selected>🇲🇽 ES</option>
+        <option value="en">🇺🇸 EN</option>
+        <option value="fr">🇫🇷 FR</option>
+      </select>
     </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section id="hero" class="hero" aria-labelledby="hero-name">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">disponible para proyectos <span class="dot-blink">▮</span></div>
+      <h1 id="hero-name">Tifany<br><span class="line-accent">Ontiveros</span></h1>
+      <p class="hero-role"><span id="typewriter"></span></p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#proyectos" data-key="hero_btn_projects">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Ver proyectos
+        </a>
+        <a class="btn btn-ghost" href="CVV.pdf" download="CV-TifanyOntiveros.pdf" data-key="hero_btn_cv">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Descargar CV
+        </a>
+      </div>
+    </div>
+    <div class="photo-zone">
+      <div class="badge badge-a">Front-End Developer</div>
+      <div class="photo-ring"></div>
+      <div class="photo-frame">
+        <img src="foto.png" alt="Tifany Ontiveros — Front-End Developer"
+             onerror="this.style.display='none';document.getElementById('ph').style.display='flex'">
+        <div id="ph" class="photo-placeholder" style="display:none">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".4">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>foto.png</span>
+        </div>
+      </div>
+      <div class="badge badge-b"><strong>∞</strong>amor por el diseño</div>
+    </div>
+  </div>
 </section>
 
-    <section id="contacto" class="section" aria-labelledby="contact-title">
-        <div class="container">
-            <h2 id="contact-title" data-key="title_contact">Hablemos | Contacto</h2>
+<!-- ── MARQUEE ── -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">
+      <span>HTML5</span><span class="m-sep">✦</span>
+      <span>CSS3</span><span class="m-sep">✦</span>
+      <span>JavaScript</span><span class="m-sep">✦</span>
+      <span>Figma</span><span class="m-sep">✦</span>
+      <span>Git & GitHub</span><span class="m-sep">✦</span>
+      <span>UI / UX Design</span><span class="m-sep">✦</span>
+    </div>
+    <div class="marquee-item" aria-hidden="true">
+      <span>HTML5</span><span class="m-sep">✦</span>
+      <span>CSS3</span><span class="m-sep">✦</span>
+      <span>JavaScript</span><span class="m-sep">✦</span>
+      <span>Figma</span><span class="m-sep">✦</span>
+      <span>Git & GitHub</span><span class="m-sep">✦</span>
+      <span>UI / UX Design</span><span class="m-sep">✦</span>
+    </div>
+  </div>
+</div>
 
-            <div class="contact-grid">
-                <dl>
-                    <dt data-key="contact_email_label">Email:</dt>
-                    <dd><a href="mailto:niicole_21@hotmail.com">niicole_21@hotmail.com</a></dd>
-
-                    <dt data-key="contact_linkedin_label">LinkedIn:</dt>
-                    <dd><a href="https://www.linkedin.com/in/tifany-ontiveros-713a8129a" target="_blank">linkedin.com/in/tifanyontiveros</a></dd>
-
-                    <dt data-key="contact_github_label">GitHub:</dt>
-                    <dd><a href="https://gitlab.com/tifanyontiveros" target="_blank">gitlab.com/tifanyontiveros</a></dd>
-                    
-                    <dt data-key="contact_location_label">Ubicación:</dt>
-                    <dd>Ciudad, País</dd>
-                </dl>
-
-                <form class="contact-form" action="mailto:niicole_21@hotmail.com" method="POST" enctype="text/plain"> 
-                    <label for="input-nombre" data-key="form_name_label">Nombre:</label>
-                    <input type="text" id="input-nombre" name="nombre" required> 
-                    
-                    <label for="input-email" data-key="form_email_label">Email:</label>
-                    <input type="email" id="input-email" name="email" required> 
-                    
-                    <label for="input-mensaje" data-key="form_message_label">Mensaje:</label>
-                    <textarea id="input-mensaje" name="mensaje" rows="4" required></textarea>
-
-                    <button class="btn" type="submit" data-key="form_submit">Enviar mensaje</button> 
-                </form>
-            </div>
+<!-- ── SOBRE MÍ ── -->
+<section id="sobre-mi" class="section" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about-layout">
+      <div data-reveal="left">
+        <p class="sec-label">01 — Sobre mí</p>
+        <h2 class="sec-title" id="about-title">Hola, soy <em>Tifany</em></h2>
+        <div class="about-body" style="margin-top:2rem">
+          <p id="about-text" data-key="text_about">
+            Soy desarrolladora <b>Front-End</b> enfocada en interfaces modernas, accesibles y responsivas.
+            Mi pasión es traducir diseños creativos en experiencias de usuario fluidas y eficientes.
+          </p>
+          <p>Trabajo principalmente con <b>HTML, CSS y JavaScript</b>, y exploro constantemente nuevas herramientas y tendencias para mantenerme siempre a la vanguardia del diseño web.</p>
         </div>
-    </section>
+      </div>
+      <div class="about-cards" data-reveal>
+        <div class="a-card"><div class="a-icon">💡</div><h4>Diseño creativo</h4><p>Interfaces únicas con personalidad propia</p></div>
+        <div class="a-card"><div class="a-icon">⚡</div><h4>Código limpio</h4><p>Eficiente, escalable y bien documentado</p></div>
+        <div class="a-card"><div class="a-icon">♿</div><h4>Accesibilidad</h4><p>Web inclusiva para todas las personas</p></div>
+        <div class="a-card"><div class="a-icon">📱</div><h4>Responsive</h4><p>Perfecta en cualquier dispositivo</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="site-footer" role="contentinfo">
-        <p data-key="footer_text"> © 2025 Tifany Ontiveros — Frontend Developer</p>
-    </footer>
+<div class="rule"></div>
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="script.js" defer></script>
+<!-- ── HABILIDADES ── -->
+<section id="habilidades" class="section section-alt" aria-labelledby="skills-title">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="sec-label">02 — Habilidades</p>
+      <h2 class="sec-title" id="skills-title">Stack <em>técnico</em></h2>
+    </div>
+    <div class="skills-layout">
+      <div class="sk-group" data-reveal role="group" aria-labelledby="sk-lang">
+        <div class="sk-title"><span>✦</span> <span id="sk-lang" data-key="skills_lang_title">Lenguajes</span></div>
+        <div class="sk-tags">
+          <span class="sk-tag">HTML5</span><span class="sk-tag">CSS3</span><span class="sk-tag">JavaScript ES6+</span>
+        </div>
+      </div>
+      <div class="sk-group" data-reveal role="group" aria-labelledby="sk-fw">
+        <div class="sk-title"><span>◈</span> <span id="sk-fw" data-key="skills_frameworks_title">Frameworks</span></div>
+        <div class="sk-tags">
+          <span class="sk-tag">CSS</span><span class="sk-tag">Bootstrap</span><span class="sk-tag">Node.js</span>
+        </div>
+      </div>
+      <div class="sk-group" data-reveal role="group" aria-labelledby="sk-tools">
+        <div class="sk-title"><span>⬡</span> <span id="sk-tools" data-key="skills_tools_title">Herramientas</span></div>
+        <div class="sk-tags">
+          <span class="sk-tag">Git / GitHub</span><span class="sk-tag">Figma</span><span class="sk-tag">VS Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ── PROYECTOS ── -->
+<section id="proyectos" class="section" aria-labelledby="projects-title">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="sec-label">03 — Proyectos</p>
+      <h2 class="sec-title" id="projects-title">Trabajo <em>selecto</em></h2>
+    </div>
+    <div class="projects-grid">
+      <article class="p-card" data-reveal>
+        <div class="p-img">
+          <img src="rutamaz.png" alt="App móvil Rutamaz" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="p-img-ph" style="display:none">🗺️</div>
+          <div class="p-img-shade"></div>
+        </div>
+        <div class="p-body">
+          <h3 data-key="project_rutamaz_title">Rutamaz</h3>
+          <p data-key="project_rutamaz_desc">App móvil de rutas de transporte público en Mazatlán — prototipo interactivo en Figma.</p>
+          <div class="p-tags"><span class="p-tag">Figma</span><span class="p-tag">UX Design</span><span class="p-tag">Prototipo</span></div>
+          <a href="https://www.figma.com/design/t18B1TD3Po3zbTNpO1RWSD/RutaMaz?node-id=0-1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Ver en Figma →</a>
+        </div>
+      </article>
+      <article class="p-card" data-reveal style="transition-delay:.12s">
+        <div class="p-img">
+          <img src="eazyhome.png" alt="Sitio web Eazy Home" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="p-img-ph" style="display:none">🏠</div>
+          <div class="p-img-shade"></div>
+        </div>
+        <div class="p-body">
+          <h3 data-key="project_eazyhome_title">Eazy Home</h3>
+          <p data-key="project_eazyhome_desc">Diseño y maquetación de interfaz para sitio web de bienes raíces — enfoque en claridad visual y conversión.</p>
+          <div class="p-tags"><span class="p-tag">HTML</span><span class="p-tag">CSS</span><span class="p-tag">MySQL</span></div>
+          <a href="https://www.figma.com/design/vLVLjb3iGSoS2QxVEy5SST/Easyhome?node-id=0-1" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Ver en Figma →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ── CERTIFICACIONES ── -->
+<section id="certificaciones" class="section section-alt" aria-labelledby="certs-title">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="sec-label">04 — Educación</p>
+      <h2 class="sec-title" id="certs-title">Certificaciones <em>&amp; Cursos</em></h2>
+    </div>
+    <div class="certs-grid">
+      <button type="button" class="cert-card" data-reveal
+        data-cert-title="CSS Essentials"
+        data-cert-by="Cisco NetAcad"
+        data-cert-img="css.png"
+        data-cert-link="https://www.credly.com/badges/331e1f7a-054a-4100-b6f2-74b82e8f6f92/public_url"
+        aria-label="Ver certificado CSS Essentials">
+        <div class="cert-logo">
+          <img src="css.png" alt="CSS cert logo" onerror="this.style.display='none';this.parentElement.textContent='🎨'">
+        </div>
+        <div>
+          <p class="cert-name" data-key="cert_css_title">CSS Essentials</p>
+          <span class="cert-by">Cisco NetAcad</span>
+          <span class="cert-hint">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Ver certificado
+          </span>
+        </div>
+      </button>
+      <button type="button" class="cert-card" data-reveal
+        data-cert-title="HTML Essentials"
+        data-cert-by="Cisco NetAcad"
+        data-cert-img="cert2.png"
+        data-cert-link="https://www.credly.com/badges/331e1f7a-054a-4100-b6f2-74b82e8f6f92/public_url"
+        aria-label="Ver certificado HTML Essentials">
+        <div class="cert-logo">
+          <img src="cert2.png" alt="HTML cert logo" onerror="this.style.display='none';this.parentElement.textContent='🌐'">
+        </div>
+        <div>
+          <p class="cert-name" data-key="cert_html_title">HTML Essentials</p>
+          <span class="cert-by">Cisco NetAcad</span>
+          <span class="cert-hint">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Ver certificado
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ── CONTACTO ── -->
+<section id="contacto" class="section" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="sec-label">05 — Contacto</p>
+      <h2 class="sec-title" id="contact-title">Hablemos <em>juntos</em></h2>
+    </div>
+    <div class="contact-layout">
+      <div data-reveal="left">
+        <p class="contact-blurb">¿Tienes un proyecto en mente? Me encantaría escucharte. Estoy disponible para colaboraciones, freelance o nuevas oportunidades.</p>
+        <div class="contact-links">
+          <a href="mailto:niicole_21@hotmail.com" class="c-link">
+            <div class="c-icon">✉</div>
+            <div><span class="c-meta">Email</span><span class="c-val">niicole_21@hotmail.com</span></div>
+          </a>
+          <a href="https://www.linkedin.com/in/tifany-ontiveros-713a8129a" target="_blank" rel="noopener" class="c-link">
+            <div class="c-icon">in</div>
+            <div><span class="c-meta">LinkedIn</span><span class="c-val">tifany-ontiveros</span></div>
+          </a>
+          <a href="https://gitlab.com/tifanyontiveros" target="_blank" rel="noopener" class="c-link">
+            <div class="c-icon">⎇</div>
+            <div><span class="c-meta">GitLab</span><span class="c-val">tifanyontiveros</span></div>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" action="mailto:niicole_21@hotmail.com" method="POST" enctype="text/plain" data-reveal>
+        <div class="f-group">
+          <label for="inp-name" data-key="form_name_label">Nombre</label>
+          <input type="text" id="inp-name" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+        <div class="f-group">
+          <label for="inp-email" data-key="form_email_label">Email</label>
+          <input type="email" id="inp-email" name="email" placeholder="tu@email.com" required>
+        </div>
+        <div class="f-group">
+          <label for="inp-msg" data-key="form_message_label">Mensaje</label>
+          <textarea id="inp-msg" name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" data-key="form_submit">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer" role="contentinfo">
+  <p>© 2026 <em>Tifany Ontiveros</em> — Front-End Developer &nbsp;·&nbsp; Hecho con <em>♡</em> desde Mazatlán</p>
+</footer>
+
+
+<div class="cert-modal" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+  <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+  <div class="cert-modal-box">
+    <div class="cert-modal-header">
+      <div>
+        <div class="cert-modal-title" id="cert-modal-title">Certificado</div>
+        <span id="cert-modal-by"></span>
+      </div>
+      <button class="cert-modal-close" id="cert-modal-close" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="cert-modal-img-wrap" id="cert-modal-img-wrap"></div>
+    <div class="cert-modal-footer">
+      <div class="cert-modal-meta">
+        <strong id="cert-modal-meta-title"></strong>
+        <span id="cert-modal-meta-by"></span>
+      </div>
+      <a id="cert-modal-extlink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        Verificar en Credly
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
